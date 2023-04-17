@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protostats;
+option go_package = "/protostats";
+
+service StatsService {
+    
+    rpc GetStatById (GetStatByIdRequest) returns (GetStatByIdResponse) {};
+}
+
+message GetStatByIdRequest {
+    int32 id = 1;
+}
+
+message GetStatByIdResponse {
+     string message = 1;
+}
